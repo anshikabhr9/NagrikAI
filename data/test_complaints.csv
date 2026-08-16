@@ -1,0 +1,65 @@
+id,text,language,expected_department,expected_category,expected_priority,is_hazard,ward
+TC01,"Massive pothole on Janpath Road near Tolstoy Marg crossing causing severe traffic jams and risk of two-wheeler accidents.",en,civil_roads,Pothole Repair,High,false,Ward 1 - Connaught Place
+TC02,"Sadak par bada gaddha ho gaya hai Mandi House circle ke paas gaadiyan fas rahi hain repair karwaye.",hinglish,civil_roads,Pothole Repair,Medium,false,Ward 2 - Mandi House
+TC03,"कनॉट प्लेस इनर सर्किल के पास फुटपाथ के पेवर ब्लॉक टूटे हुए हैं, पैदल चलने वालों को गिरने का खतरा है।",hi,civil_roads,Broken Footpath / Paver Blocks,Medium,false,Ward 1 - Connaught Place
+TC04,"Road divider is completely shattered and displaced into the driving lane near Barakhamba road.",en,civil_roads,Damaged Road Divider,High,false,Ward 1 - Connaught Place
+TC05,"Huge garbage pile overflowing from dhalao behind Khan Market, producing terrible stench and attracting flies.",en,public_health_sanitation,Overflowing Dhalao / Dustbin,High,false,Ward 4 - Khan Market
+TC06,"Gole market me dustbin se kachra sadak par fail raha hai pichle teen din se sweeper nahi aaya.",hinglish,public_health_sanitation,Uncollected Garbage,Medium,false,Ward 5 - Gole Market
+TC07,"सरोजिनी नगर मार्केट में सार्वजनिक शौचालय बहुत गंदा है और पानी भी नहीं आ रहा है, तुरंत सफाई की आवश्यकता है।",hi,public_health_sanitation,Dirty Public Toilet / Urinal,High,false,Ward 7 - Sarojini Nagar
+TC08,"Dead street dog lying near Lodhi Colony block 15 since yesterday, needs immediate removal.",en,public_health_sanitation,Dead Animal Removal,High,false,Ward 6 - Lodhi Colony
+TC09,"DANGER: High voltage live electric wire is snapped and dangling on the pavement outside school gate!",en,electricity_power,Live Wire Hanging / Danger,Critical,true,Ward 3 - Chanakyapuri
+TC10,"Transformer sparking furiously with loud popping sounds and smoke coming out in Bengali Market.",en,electricity_power,Transformer Sparking / Explosion Risk,Critical,true,Ward 2 - Mandi House
+TC11,"Gole Market block C me subah se bijli gul hai transformer me se aawaz aa rahi thi.",hinglish,electricity_power,Power Outage / Blackout,High,false,Ward 5 - Gole Market
+TC12,"चाणक्यपुरी ब्लॉक बी में बिजली का फीडर पिलर खुला पड़ा है, कोई भी बच्चा छू सकता है बहुत खतरा है।",hi,electricity_power,Open Feeder Pillar,Critical,true,Ward 3 - Chanakyapuri
+TC13,"Tap water coming out completely black and foul-smelling in Tilak Marg quarters since morning.",en,water_sewerage,Contaminated / Dirty Tap Water,Critical,true,Ward 2 - Mandi House
+TC14,"Major underground water pipeline burst on Shanti Path water gushing out on main carriageway.",en,water_sewerage,Pipeline Burst / Leakage,High,false,Ward 3 - Chanakyapuri
+TC15,"Sarojini Nagar block 8 me sewer line choke ho gayi hai pura ganda pani sadak par beh raha hai.",hinglish,water_sewerage,Sewer Overflow / Choke,High,false,Ward 7 - Sarojini Nagar
+TC16,"कनॉट प्लेस एम ब्लॉक के सामने खुला मैनहोल है, ढक्कन गायब है, अंधेरे में जानलेवा दुर्घटना हो सकती है।",hi,water_sewerage,Open / Missing Manhole Cover,Critical,true,Ward 1 - Connaught Place
+TC17,"Huge Neem tree uprooted during thunderstorm blocking entire main road near Lodhi Road flyover.",en,horticulture_gardens,Fallen Tree Blocking Road,Critical,true,Ward 6 - Lodhi Colony
+TC18,"Dry tree branch hanging precariously above parking lot in Chanakyapuri may fall on pedestrians.",en,horticulture_gardens,Dangerous Overhanging Branch,High,false,Ward 3 - Chanakyapuri
+TC19,"Nehru Park ke walking track ke paas ghas bahut badi ho gayi hai aur kanten bikhre pade hain.",hinglish,horticulture_gardens,Unmaintained Park / Overgrown Grass,Low,false,Ward 3 - Chanakyapuri
+TC20,"लोधी गार्डन में बच्चों के झूले टूटे हुए हैं और बेंच टूटी पड़ी हैं, मरम्मत करवाएं।",hi,horticulture_gardens,Broken Park Benches / Swings,Low,false,Ward 6 - Lodhi Colony
+TC21,"Unauthorized commercial fourth floor construction going on without NDMC sanction in Bengali Market.",en,building_encroachment,Illegal Construction,High,false,Ward 2 - Mandi House
+TC22,"Old heritage building showing deep structural cracks and bulging brickwork near Gole Market.",en,building_encroachment,Dangerous / Dilapidated Building Structure,Critical,true,Ward 5 - Gole Market
+TC23,"Footpath par illegal cement structure banakar rasta block kar diya hai Khan Market lane me.",hinglish,building_encroachment,Footpath / Public Land Encroachment,Medium,false,Ward 4 - Khan Market
+TC24,"सरोजिनी नगर में सरकारी जमीन पर अवैध कब्जा करके शेड बना लिया गया है, तुरंत कार्रवाई करें।",hi,building_encroachment,Footpath / Public Land Encroachment,High,false,Ward 7 - Sarojini Nagar
+TC25,"All 8 streetlights on Mother Teresa Crescent road are non-functional, creating pitch black blind spots.",en,street_lighting,Street Light Not Working / Dark Spot,High,false,Ward 3 - Chanakyapuri
+TC26,"Streetlight pole leaning dangerously at 45 degree angle after being hit by a truck near Mandi House.",en,street_lighting,Damaged / Leaning Light Pole,Critical,true,Ward 2 - Mandi House
+TC27,"Lodhi colony main road par saari street lights din me bhi jal rahi hain energy waste ho rahi hai.",hinglish,street_lighting,Street Lights ON in Daytime,Low,false,Ward 6 - Lodhi Colony
+TC28,"कस्तूरबा गांधी मार्ग पर स्ट्रीट लाइट लगातार ब्लिंक कर रही है और कभी भी बंद हो जाती है।",hi,street_lighting,Flickering Street Light,Medium,false,Ward 1 - Connaught Place
+TC29,"Charak Palika Hospital pharmacy is refusing prescribed essential hypertension and insulin medicines citing zero stock.",en,medical_services,Medicine Out of Stock,High,false,Ward 8 - Moti Bagh
+TC30,"NDMC polyclinic Babar Road has no general physician available since 10 AM despite long queue of senior citizens.",en,medical_services,Doctor Unavailability,High,false,Ward 1 - Connaught Place
+TC31,"Moti Bagh dispensary me doctor absent hain aur staff batata hai kal aana emergency patient ko dekh nahi rahe.",hinglish,medical_services,Doctor Unavailability,High,false,Ward 8 - Moti Bagh
+TC32,"चरक पालिका अस्पताल में 2 महीने पहले बच्चे का जन्म हुआ था लेकिन जन्म प्रमाण पत्र अभी तक पोर्टल पर अपडेट नहीं हुआ।",hi,medical_services,Birth / Death Registration Delay,Medium,false,Ward 8 - Moti Bagh
+TC33,"Navyug School Peshwa Road has broken desks in class 5 and exposed fan wires hanging from ceiling.",en,education,School Infrastructure / Broken Furniture,High,false,Ward 5 - Gole Market
+TC34,"Mid-day meal delivered today at Atal Adarsh school Lodhi Road was stale and smelling bad, unfit for children.",en,education,Mid-Day Meal Hygiene Complaint,Critical,true,Ward 6 - Lodhi Colony
+TC35,"Navyug school me drinking water cooler kharab hai bachho ko ganda pani pina pad raha hai.",hinglish,education,Drinking Water Facility in School,High,false,Ward 7 - Sarojini Nagar
+TC36,"अटल आदर्श विद्यालय में छात्राओं के शौचालय का दरवाजा टूटा हुआ है और साफ-सफाई बिल्कुल नहीं है।",hi,education,Student Sanitation & Toilets,High,false,Ward 5 - Gole Market
+TC37,"Property tax paid online through NDMC portal transaction ID NDMC983482 deducted from bank but receipt not generated.",en,commercial_property_tax,Online Payment Failure / Receipt Not Generated,Medium,false,Ward 1 - Connaught Place
+TC38,"Received inflated property tax demand notice with double commercial factor for residential floor in Barakhamba.",en,commercial_property_tax,Property Tax Calculation Error,Medium,false,Ward 1 - Connaught Place
+TC39,"Property tax portal par mutation application 45 din se pending hai aur koi update nahi mila.",hinglish,commercial_property_tax,Mutation Delay,Low,false,Ward 4 - Khan Market
+TC40,"दुकान का ट्रेड लाइसेंस रिन्यूअल फीस कट गई लेकिन डिजिटल लाइसेंस सर्टिफिकेट डाउनलोड नहीं हो पा रहा है।",hi,commercial_property_tax,Commercial Trade License Issue,Medium,false,Ward 1 - Connaught Place
+TC41,"Parking attendant at Connaught Place Inner Circle Block E forcibly charging 100 rupees instead of official 20 rupee rate.",en,parking_traffic,Overcharging by Parking Attendant,High,false,Ward 1 - Connaught Place
+TC42,"Illegal parking mafia blocking the entire fire brigade entry lane in Sarojini Nagar market.",en,parking_traffic,Illegal / Unauthorized Parking,Critical,true,Ward 7 - Sarojini Nagar
+TC43,"Khan market multilevel parking barrier toot gaya hai aur lambi line lag gayi hai.",hinglish,parking_traffic,Damaged Parking Barrier / Sensor,Medium,false,Ward 4 - Khan Market
+TC44,"चाणक्यपुरी में स्कूल के सामने जेब्रा क्रॉसिंग का पेंट पूरी तरह मिट चुका है, बच्चों को सड़क पार करने में खतरा है।",hi,parking_traffic,Faded Zebra Crossing / Lane Marking,Medium,false,Ward 3 - Chanakyapuri
+TC45,"Pack of 6 aggressive stray dogs chasing two-wheelers and bit a delivery boy in Lodhi Colony lane 4.",en,stray_animals_veterinary,Aggressive Stray Dog / Dog Bite Threat,Critical,true,Ward 6 - Lodhi Colony
+TC46,"Troop of aggressive monkeys entered residential balconies in Chanakyapuri breaking flower pots and attacking residents.",en,stray_animals_veterinary,Monkey Menace / Property Damage,High,false,Ward 3 - Chanakyapuri
+TC47,"Sarojini Nagar market ke pass 3 bimar awara kutton ko turant treatment aur rescue ki zarurat hai.",hinglish,stray_animals_veterinary,Injured Animal Rescue,High,false,Ward 7 - Sarojini Nagar
+TC48,"तिलक मार्ग मुख्य सड़क पर 4-5 आवारा गाय बैठी हैं जिससे गाड़ियों की टक्कर होने का खतरा बना हुआ है।",hi,stray_animals_veterinary,Stray Cattle / Cow on Main Road,Medium,false,Ward 2 - Mandi House
+TC49,"Dozens of unauthorized thelas and street hawkers completely blocking pedestrian walkway outside Palika Bazaar gate 2.",en,enforcement,Unauthorized Street Vendor / Hawkers,Medium,false,Ward 1 - Connaught Place
+TC50,"Encroachers have set up illegal fruit stalls in designated non-vending zone near Khan Market metro station.",en,enforcement,Vending in Non-Vending Zone,Medium,false,Ward 4 - Khan Market
+TC51,"Sarojini market me kapde ke thele walo ne rasta band kar diya hai emergency exit bhi block hai.",hinglish,enforcement,Market Walkway Blocked by Thelas,High,false,Ward 7 - Sarojini Nagar
+TC52,"कनॉट प्लेस में बिना अनुमति के बड़े-बड़े अवैध होर्डिंग और बैनर पेड़ और खंभों पर टांग दिए गए हैं।",hi,enforcement,Illegal Banner / Hoarding on Public Property,Low,false,Ward 1 - Connaught Place
+TC53,"NDMC 311 mobile app continuously crashing on grievance submission screen after attaching photo on Android 14.",en,it_egovernance,NDMC 311 Mobile App Bug / Crash,Medium,false,Ward 1 - Connaught Place
+TC54,"Citizen grievance portal not sending OTP to registered mobile number, unable to track filed complaint.",en,it_egovernance,Citizen Portal Login / OTP Issue,Medium,false,Ward 3 - Chanakyapuri
+TC55,"NDMC website par grievance status check karte waqt 500 internal server error show ho raha hai.",hinglish,it_egovernance,Grievance Tracking Link Error,Medium,false,Ward 5 - Gole Market
+TC56,"कनॉट प्लेस पालिका केंद्र के पास लगा स्मार्ट सिटी कियोस्क स्क्रीन ब्लैक है और काम नहीं कर रहा।",hi,it_egovernance,Smart City Kiosk Non-Functional,Low,false,Ward 1 - Connaught Place
+TC57,"Security guard openly burning huge pile of dry leaves and plastic waste behind Lodhi Estate causing thick suffocating smoke.",en,environment_pollution,Open Garbage / Leaf Burning,Critical,true,Ward 6 - Lodhi Colony
+TC58,"Construction site at Tolstoy Marg operating without mandatory dust green sheets or water sprinkler causing heavy dust smog.",en,environment_pollution,Construction Site Dust Violation (No Tarpaulin),High,false,Ward 1 - Connaught Place
+TC59,"Khan market ke pass dukan wale raat ko plastic kachra jala rahe hain saans lena mushkil ho gaya hai.",hinglish,environment_pollution,Open Garbage / Leaf Burning,High,false,Ward 4 - Khan Market
+TC60,"चाणक्यपुरी डिप्लोमैटिक एन्क्लेव के पास जनरेटर से भयंकर काला धुआं और तेज आवाज निकल रही है।",hi,environment_pollution,Generator Noise / Diesel Smoke,Medium,false,Ward 3 - Chanakyapuri
+TC61,"EMERGENCY: Heavy downpour caused 4 feet waterlogging in Minto Bridge underpass, car trapped with passengers inside!",en,disaster_emergency,Major Urban Flooding / Inundation,Critical,true,Ward 1 - Connaught Place
+TC62,"Boundary wall collapsed during storm on parked vehicles near Mandi House, immediate disaster team needed.",en,disaster_emergency,Building / Wall Collapse Emergency,Critical,true,Ward 2 - Mandi House
+TC63,"Peshwa Road par purani building ki balcony gir gayi hai aur malba sadak par gira hai turant relief bhejo.",hinglish,disaster_emergency,Building / Wall Collapse Emergency,Critical,true,Ward 5 - Gole Market
+TC64,"कनॉट प्लेस के पास भूमिगत गैस पाइपलाइन से तेज गंध आ रही है, आग लगने का गंभीर खतरा है तुरंत टीम भेजें।",hi,disaster_emergency,Toxic Gas Leak / Chemical Hazard,Critical,true,Ward 1 - Connaught Place

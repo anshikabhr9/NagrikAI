@@ -1,0 +1,284 @@
+{
+  "version": "2.0.0",
+  "organization": "New Delhi Municipal Council (NDMC)",
+  "total_departments": 16,
+  "departments": [
+    {
+      "id": "civil_roads",
+      "name": "Civil Engineering & Roads",
+      "code": "CIV",
+      "sla_hours_default": 48,
+      "description": "Maintenance of roads, footpaths, pavements, storm water drains, flyovers, road berms, and road repairs.",
+      "sub_categories": [
+        "Pothole Repair",
+        "Broken Footpath / Paver Blocks",
+        "Waterlogged Storm Drain",
+        "Damaged Road Divider",
+        "Speed Breaker Repair",
+        "Road Cave-in / Sinkhole"
+      ],
+      "keywords_en": ["pothole", "road", "footpath", "pavement", "sinkhole", "divider", "asphalt", "crater", "speed breaker", "berm", "kerb"],
+      "keywords_hi": ["सड़क", "गड्ढा", "फुटपाथ", "नाला", "डामर", "डिवाइडर", "रास्ता"],
+      "keywords_hinglish": ["gaddha", "sadak", "footpath", "toota", "divider", "gaddhe", "drainage", "road repair"]
+    },
+    {
+      "id": "public_health_sanitation",
+      "name": "Public Health & Sanitation",
+      "code": "SAN",
+      "sla_hours_default": 24,
+      "description": "Garbage disposal, waste management, sweepers, overflowing dustbins, open dumping, public urinals/toilets, and fumigation.",
+      "sub_categories": [
+        "Uncollected Garbage",
+        "Overflowing Dhalao / Dustbin",
+        "Dead Animal Removal",
+        "Dirty Public Toilet / Urinal",
+        "Street Sweeping Missed",
+        "Mosquito Breeding / Fogging Request"
+      ],
+      "keywords_en": ["garbage", "trash", "waste", "dustbin", "dhalao", "sweeper", "cleaning", "foul smell", "public toilet", "urinal", "fogging", "dengue"],
+      "keywords_hi": ["कचरा", "कूड़ा", "सफाई", "बदबू", "शौचालय", "मच्छर", "छिड़काव", "झाड़ू"],
+      "keywords_hinglish": ["koora", "kachra", "badbu", "dustbin", "safai", "sweeper", "dhalao", "toilets", "machhar", "fogging", "kuda"]
+    },
+    {
+      "id": "electricity_power",
+      "name": "Electricity & Power Distribution",
+      "code": "ELE",
+      "sla_hours_default": 12,
+      "description": "Power outages, electric transformer sparking, high/low voltage, dangling wires, open feeder pillars, and electric metering issues.",
+      "sub_categories": [
+        "Power Outage / Blackout",
+        "Live Wire Hanging / Danger",
+        "Transformer Sparking / Explosion Risk",
+        "Open Feeder Pillar",
+        "High / Low Voltage",
+        "Faulty Electric Meter"
+      ],
+      "keywords_en": ["power cut", "electricity", "live wire", "sparking", "transformer", "blackout", "voltage", "feeder pillar", "electric shock", "meter"],
+      "keywords_hi": ["बिजली", "तार", "ट्रांसफार्मर", "करंट", "वोल्टेज", "शॉर्ट सर्किट", "अंधेरा"],
+      "keywords_hinglish": ["bijli", "current", "taar", "dangling wire", "transformer", "powercut", "blackout", "spark", "bijli gul", "voltage issue"]
+    },
+    {
+      "id": "water_sewerage",
+      "name": "Water Supply & Sewerage",
+      "code": "WAT",
+      "sla_hours_default": 24,
+      "description": "Water pipeline leakage, contaminated dirty water, low water pressure, sewer overflow, open manholes, and tanker requests.",
+      "sub_categories": [
+        "Contaminated / Dirty Tap Water",
+        "Water Supply Disrupted / No Water",
+        "Pipeline Burst / Leakage",
+        "Sewer Overflow / Choke",
+        "Open / Missing Manhole Cover",
+        "Water Tanker Request"
+      ],
+      "keywords_en": ["water supply", "dirty water", "contaminated", "pipeline leak", "sewer overflow", "open manhole", "gutter", "drain choke", "water tanker", "smelly water"],
+      "keywords_hi": ["पानी", "सीवर", "गंदा पानी", "मैनहोल", "पाइप", "टैंकर", "गटर"],
+      "keywords_hinglish": ["pani", "ganda paani", "sewer", "gutter", "manhole", "leakage", "pipeline", "choke", "nal me pani nahi", "badbu wala pani"]
+    },
+    {
+      "id": "horticulture_gardens",
+      "name": "Horticulture & Public Parks",
+      "code": "HOR",
+      "sla_hours_default": 48,
+      "description": "Fallen trees, dangerous tree branches, dry parks, park lighting, grass cutting, unmaintained roundabouts, and flower beds.",
+      "sub_categories": [
+        "Fallen Tree Blocking Road",
+        "Dangerous Overhanging Branch",
+        "Unmaintained Park / Overgrown Grass",
+        "Broken Park Benches / Swings",
+        "Damaged Irrigation / Dry Plants",
+        "Illegal Tree Cutting"
+      ],
+      "keywords_en": ["tree", "branch", "park", "garden", "lawn", "fallen tree", "pruning", "grass", "benches", "swings", "greenery", "horticulture"],
+      "keywords_hi": ["पेड़", "शाखा", "पार्क", "बगीचा", "घास", "पेड़ गिरना", "पौधे"],
+      "keywords_hinglish": ["ped", "tree fall", "park", "bagicha", "jhaadiyan", "branch toot gayi", "grass cutting", "swings", "bench"]
+    },
+    {
+      "id": "building_encroachment",
+      "name": "Building Architecture & Encroachment",
+      "code": "BLD",
+      "sla_hours_default": 72,
+      "description": "Illegal construction, structural safety, unauthorized extensions, pavement encroachment, building plan violations, and hazardous buildings.",
+      "sub_categories": [
+        "Illegal Construction",
+        "Dangerous / Dilapidated Building Structure",
+        "Footpath / Public Land Encroachment",
+        "Unauthorized Commercial Activity",
+        "Setback Violation"
+      ],
+      "keywords_en": ["illegal construction", "encroachment", "unauthorized building", "collapse risk", "demolition", "pavement blocked", "structural crack"],
+      "keywords_hi": ["अवैध निर्माण", "कब्जा", "अतिक्रमण", "मकान दरार", "अवैध दुकान"],
+      "keywords_hinglish": ["avaidh nirman", "kabza", "encroachment", "illegal shop", "building girne wali hai", "footpath blocked", "construction bina permission"]
+    },
+    {
+      "id": "street_lighting",
+      "name": "Street Lighting & Electrical Assets",
+      "code": "STL",
+      "sla_hours_default": 24,
+      "description": "Non-functional streetlights, dark road stretches, glowing lights during daytime, broken light poles, and faulty timers.",
+      "sub_categories": [
+        "Street Light Not Working / Dark Spot",
+        "Flickering Street Light",
+        "Damaged / Leaning Light Pole",
+        "Street Lights ON in Daytime",
+        "Underpass / High-Mast Light Failure"
+      ],
+      "keywords_en": ["street light", "lamp post", "dark stretch", "pole", "light not working", "high mast", "flickering light", "daytime lighting"],
+      "keywords_hi": ["स्ट्रीट लाइट", "खंभा", "अंधेरा", "लाइट खराब", "बल्ब"],
+      "keywords_hinglish": ["street light band", "khamba", "pole light", "andhera hai", "light kharab", "streetlight off", "light din me jal rahi hai"]
+    },
+    {
+      "id": "medical_services",
+      "name": "Medical Services & Health Facilities",
+      "code": "MED",
+      "sla_hours_default": 24,
+      "description": "NDMC dispensaries, polyclinics, Charak Palika hospital, medicine availability, doctor attendance, vaccination, and birth/death certificates.",
+      "sub_categories": [
+        "Dispensary / Hospital Service Issue",
+        "Medicine Out of Stock",
+        "Doctor Unavailability",
+        "Birth / Death Registration Delay",
+        "Ambulance Service Issue"
+      ],
+      "keywords_en": ["hospital", "dispensary", "doctor", "medicine", "charak palika", "polyclinic", "birth certificate", "death certificate", "vaccination"],
+      "keywords_hi": ["अस्पताल", "डिस्पेंसरी", "दवा", "डॉक्टर", "जन्म प्रमाण पत्र", "मृत्यु प्रमाण पत्र"],
+      "keywords_hinglish": ["hospital", "dispensary", "dawa nahi hai", "doctor absent", "birth certificate delay", "treatment"]
+    },
+    {
+      "id": "education",
+      "name": "Education & Navyug Schools",
+      "code": "EDU",
+      "sla_hours_default": 72,
+      "description": "NDMC Navyug schools, Atal Adarsh schools, classroom infrastructure, mid-day meal hygiene, student safety, and school sanitation.",
+      "sub_categories": [
+        "School Infrastructure / Broken Furniture",
+        "Mid-Day Meal Hygiene Complaint",
+        "Drinking Water Facility in School",
+        "Student Sanitation & Toilets",
+        "Teacher Attendance / Conduct"
+      ],
+      "keywords_en": ["school", "navyug school", "atal adarsh", "classroom", "mid-day meal", "students", "teacher", "blackboard", "school bus"],
+      "keywords_hi": ["स्कूल", "विद्यालय", "शिक्षक", "मिड-डे मील", "कक्षा", "छात्र"],
+      "keywords_hinglish": ["school", "navyug", "vidyalaya", "mid day meal", "teacher", "class room", "school me paani"]
+    },
+    {
+      "id": "commercial_property_tax",
+      "name": "Commercial & Property Tax",
+      "code": "TAX",
+      "sla_hours_default": 72,
+      "description": "Property tax assessment, mutation, online payment discrepancy, commercial license, shop tax receipt, and property assessment notices.",
+      "sub_categories": [
+        "Property Tax Calculation Error",
+        "Online Payment Failure / Receipt Not Generated",
+        "Mutation Delay",
+        "Commercial Trade License Issue",
+        "Incorrect Demand Notice"
+      ],
+      "keywords_en": ["property tax", "tax receipt", "mutation", "trade license", "assessment", "house tax", "commercial license", "demand notice"],
+      "keywords_hi": ["हाउस टैक्स", "संपत्ति कर", "रसीद", "लाइसेंस", "म्यूटेशन"],
+      "keywords_hinglish": ["property tax", "house tax", "receipt download nahi ho rahi", "mutation certificate", "tax portal"]
+    },
+    {
+      "id": "parking_traffic",
+      "name": "Parking Management & Traffic Infrastructure",
+      "code": "PRK",
+      "sla_hours_default": 48,
+      "description": "NDMC parking lots, overcharging attendants, unauthorized parking mafia, damaged parking meters, traffic signboards, and lane markings.",
+      "sub_categories": [
+        "Overcharging by Parking Attendant",
+        "Illegal / Unauthorized Parking",
+        "Damaged Parking Barrier / Sensor",
+        "Faded Zebra Crossing / Lane Marking",
+        "Broken / Missing Traffic Signboard"
+      ],
+      "keywords_en": ["parking", "overcharging", "parking slip", "traffic sign", "zebra crossing", "multilevel parking", "parking attendant", "valet"],
+      "keywords_hi": ["पार्किंग", "ज्यादा पैसे", "पार्किंग पर्ची", "ट्रैफिक साइन", "जेब्रा क्रॉसिंग"],
+      "keywords_hinglish": ["parking", "overcharge kar rahe", "slip nahi di", "traffic signboard tuta", "illegal parking", "extra charge"]
+    },
+    {
+      "id": "stray_animals_veterinary",
+      "name": "Veterinary & Stray Animal Control",
+      "code": "VET",
+      "sla_hours_default": 24,
+      "description": "Stray dog menace, monkey menace, rabid animal alert, cattle on road, injured animal rescue, and sterilization drives.",
+      "sub_categories": [
+        "Aggressive Stray Dog / Dog Bite Threat",
+        "Monkey Menace / Property Damage",
+        "Stray Cattle / Cow on Main Road",
+        "Injured Animal Rescue",
+        "Animal Sterilization & Vaccination"
+      ],
+      "keywords_en": ["stray dog", "dog bite", "rabies", "monkeys", "bandar", "cattle", "cow", "injured dog", "veterinary", "animal rescue"],
+      "keywords_hi": ["आवारा कुत्ता", "बंदर", "गाय", "कुत्ते का काटना", "पशु"],
+      "keywords_hinglish": ["kutta", "bandar", "monkeys", "stray dog", "dog bite", "bimar kutta", "sadak pe gay", "bandar pareshan kar rahe"]
+    },
+    {
+      "id": "enforcement",
+      "name": "Enforcement & Hawkers Control",
+      "code": "ENF",
+      "sla_hours_default": 24,
+      "description": "Illegal street vendors blocking market passages, squatters, non-vending zone violations, loud speaker noise, and unauthorized stalls.",
+      "sub_categories": [
+        "Unauthorized Street Vendor / Hawkers",
+        "Vending in Non-Vending Zone",
+        "Market Walkway Blocked by Thelas",
+        "Loud Commercial Noise / Public Nuisance",
+        "Illegal Banner / Hoarding on Public Property"
+      ],
+      "keywords_en": ["hawker", "vendor", "thela", "illegal stall", "squatter", "hoarding", "banner", "non vending zone", "market encroached"],
+      "keywords_hi": ["फेरीवाला", "ठेला", "अवैध दुकान", "हॉकर", "बैनर", "होर्डिंग"],
+      "keywords_hinglish": ["thela", "hawkers", "illegal rehri", "bheed laga rakhi hai", "pavement pe dukaan", "illegal banner", "hoardings"]
+    },
+    {
+      "id": "it_egovernance",
+      "name": "IT & E-Governance Services",
+      "code": "ITG",
+      "sla_hours_default": 24,
+      "description": "NDMC 311 app issues, website login glitches, OTP delays, citizen portal downtime, smart city kiosk, and payment gateway errors.",
+      "sub_categories": [
+        "NDMC 311 Mobile App Bug / Crash",
+        "Citizen Portal Login / OTP Issue",
+        "Online Payment Gateway Stuck",
+        "Smart City Kiosk Non-Functional",
+        "Grievance Tracking Link Error"
+      ],
+      "keywords_en": ["311 app", "portal", "website error", "otp", "login issue", "payment failed", "smart kiosk", "app crash", "server down"],
+      "keywords_hi": ["ऐप", "वेबसाइट", "ओटीपी", "लॉगिन", "पोर्टल", "सर्वर"],
+      "keywords_hinglish": ["app crash ho raha", "otp nahi aa raha", "website login problem", "portal error", "payment fas gaya", "311 app"]
+    },
+    {
+      "id": "environment_pollution",
+      "name": "Environment, Air Quality & Pollution",
+      "code": "ENV",
+      "sla_hours_default": 24,
+      "description": "Garbage burning, construction dust violation, industrial emissions, noise pollution, dry leaves burning, and anti-smog gun requests.",
+      "sub_categories": [
+        "Open Garbage / Leaf Burning",
+        "Construction Site Dust Violation (No Tarpaulin)",
+        "Severe Smoke / Air Quality Hazard",
+        "Generator Noise / Diesel Smoke",
+        "Anti-Smog Water Sprinkling Request"
+      ],
+      "keywords_en": ["garbage burning", "leaf burning", "smoke", "air pollution", "dust", "construction dust", "smog", "noise pollution", "aqi"],
+      "keywords_hi": ["कूड़ा जलाना", "धुआं", "प्रदूषण", "धूल", "वायु प्रदूषण", "पत्ते जलाना"],
+      "keywords_hinglish": ["koora jala rahe", "dhuan", "patte jalana", "dust pollution", "construction dust", "saans lene me takleef", "smog"]
+    },
+    {
+      "id": "disaster_emergency",
+      "name": "Disaster Management & Emergency Relief",
+      "code": "DIS",
+      "sla_hours_default": 4,
+      "description": "Flooding, building collapse, major storm damage, toxic gas leak, chemical spill, earthquake response, and life-threatening emergencies.",
+      "sub_categories": [
+        "Major Urban Flooding / Inundation",
+        "Building / Wall Collapse Emergency",
+        "Toxic Gas Leak / Chemical Hazard",
+        "Major Fire Hazard / Explosive Threat",
+        "Storm / Cyclone Fallen Structures"
+      ],
+      "keywords_en": ["emergency", "disaster", "flood", "collapse", "gas leak", "chemical", "explosion", "life threat", "rescue", "earthquake"],
+      "keywords_hi": ["आपदा", "आपातकाल", "बाढ़", "गैस रिसाव", "मकान ढहना", "धमाका", "राहत"],
+      "keywords_hinglish": ["emergency", "badi aag", "deewar gir gayi", "building gir gayi", "flood", "gas leak", "turant madad chahiye", "khatra"]
+    }
+  ]
+}

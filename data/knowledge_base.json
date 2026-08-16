@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "council": "New Delhi Municipal Council (NDMC)",
+  "headquarters": {
+    "name": "Palika Kendra",
+    "address": "Sansad Marg, New Delhi, Delhi 110001",
+    "working_hours": "Monday to Friday: 09:30 AM – 06:00 PM (Public grievances: 10:00 AM – 01:00 PM)",
+    "closed_on": "Saturdays, Sundays & Gazetted Public Holidays"
+  },
+  "emergency_helplines": {
+    "central_control_room": "1533 (Toll Free 24x7)",
+    "alternate_helpline": "011-23348300 / 011-23348301",
+    "electricity_emergency": "011-23368811 / 1912",
+    "water_supply_leakage": "011-23360683 / 011-23743642",
+    "stray_dog_veterinary": "011-23365347",
+    "disaster_management_cell": "1077 / 011-23340051",
+    "ambulance_charak_palika": "011-24671400 / 102",
+    "fire_service": "101",
+    "police": "112"
+  },
+  "faq_topics": [
+    {
+      "topic_id": "file_complaint",
+      "category": "Grievance Procedure",
+      "question": "How do I file a new grievance or civic complaint with NDMC?",
+      "answer": "You can file a complaint in 3 easy ways: 1) Use the NDMC 311 Mobile App, 2) Submit via the online citizen portal (ndmc.gov.in) with AI auto-categorization, or 3) Call the 24x7 toll-free helpline 1533. You will receive an instant 10-digit tracking number via SMS.",
+      "keywords": ["file complaint", "lodge complaint", "register grievance", "shikayat", "complaint kaise kare", "new complaint"]
+    },
+    {
+      "topic_id": "track_complaint",
+      "category": "Grievance Procedure",
+      "question": "How can I track the status of my existing grievance?",
+      "answer": "To track your grievance, enter your 10-digit Complaint ID (e.g., NDMC-2026-XXXX) on the Track Status page or text 'STATUS <ComplaintID>' to 1533. Our system shows live progress, assigned field officer, and SLA resolution timeline.",
+      "keywords": ["track status", "check status", "complaint status", "shikayat status", "tracking", "status check"]
+    },
+    {
+      "topic_id": "sla_timelines",
+      "category": "Citizen Charter",
+      "question": "What are the standard SLA resolution timelines for NDMC complaints?",
+      "answer": "Standard NDMC Citizen Charter resolution timelines: \n- Critical / Safety Hazards (Live wire, open manhole, toxic spill): 4 to 12 Hours\n- Electricity Outage / Street Lights / Sanitation: 24 Hours\n- Water Supply / Road Potholes / Stray Cattle: 24 to 48 Hours\n- Illegal Construction / Property Tax Disputes / Civil works: 72 Hours to 7 Days.",
+      "keywords": ["sla", "time limit", "kitne din me theek hoga", "resolution time", "deadline", "duration"]
+    },
+    {
+      "topic_id": "escalation_matrix",
+      "category": "Escalation",
+      "question": "What should I do if my complaint is not resolved within the SLA timeframe?",
+      "answer": "If an issue is not resolved within SLA, it automatically escalates:\n- Level 1: Junior Engineer / Sanitary Inspector (0 - SLA)\n- Level 2: Executive Engineer / Chief Medical Officer (SLA + 24 hrs)\n- Level 3: Superintending Engineer / Director (SLA + 48 hrs)\n- Level 4: Secretary / Chairman NDMC (Public Hearing every Wednesday 10 AM – 12 PM at Palika Kendra).",
+      "keywords": ["escalate", "unresolved", "delay", "officer not responding", "complaint pending", "senior officer"]
+    },
+    {
+      "topic_id": "water_tanker",
+      "category": "Water Supply",
+      "question": "How can I request an emergency water tanker in NDMC area?",
+      "answer": "Emergency water tankers can be booked free of cost during pipeline disruptions by calling 011-23360683 or 1533, or lodging a 'Water Tanker Request' on the portal with your exact ward and house address. Tankers are typically dispatched within 2 hours.",
+      "keywords": ["water tanker", "pani ka tanker", "tanker request", "emergency water", "no water"]
+    },
+    {
+      "topic_id": "property_tax",
+      "category": "Revenue & Tax",
+      "question": "How do I pay property tax and get tax receipts?",
+      "answer": "Visit ndmc.gov.in -> Online Services -> Property Tax. Enter your 10-digit Property ID or Property UPIC. Payments are accepted via UPI, NetBanking, Debit/Credit Card. Instant digital signed receipts (Form G-8) are downloadable immediately upon payment.",
+      "keywords": ["property tax", "house tax", "receipt", "mutation", "tax payment", "online tax"]
+    },
+    {
+      "topic_id": "street_light_dark_spot",
+      "category": "Electricity",
+      "question": "How do I report a dark spot or faulty street light pole?",
+      "answer": "Report faulty streetlights by noting the 6-digit Pole Number painted on the lamp post. Submit a complaint under 'Street Lighting' on the NDMC portal or 311 App with pole number & landmark. Field electrical teams attend to dark spots within 24 hours.",
+      "keywords": ["street light", "dark spot", "pole number", "khamba", "andhera", "lamp post"]
+    },
+    {
+      "topic_id": "stray_dog_menace",
+      "category": "Veterinary",
+      "question": "How to report aggressive stray dogs or request animal birth control / sterilization?",
+      "answer": "Call the NDMC Veterinary Control Room at 011-23365347 or lodge a grievance under 'Veterinary & Stray Animal Control'. The NDMC animal van will capture the dog for sterilization, anti-rabies vaccination (ABC program), and release back as per Animal Birth Control Rules 2023.",
+      "keywords": ["stray dog", "dog bite", "kutta", "animal rescue", "sterilization", "rabies"]
+    }
+  ]
+}

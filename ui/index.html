@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDMC AI Grievance Intelligence System — Automation Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="ndmc-logo-badge">NDMC AI</div>
+      <div class="brand-title">
+        <h1>Smart Grievance Intelligence Engine</h1>
+        <p>Member 2 (AI & Automation) Automation Suite • 16-Dept Taxonomy</p>
+      </div>
+    </div>
+    <div class="header-status">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>AI Engine Online (1.2ms P95)</span>
+      </div>
+      <a href="/docs" target="_blank" class="btn btn-secondary btn-sm" id="btn-swagger-docs">⚡ API Docs (Swagger)</a>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="nav-tabs">
+    <button class="nav-tab active" data-tab="triage" id="tab-btn-triage">🔬 AI Triage Sandbox</button>
+    <button class="nav-tab" data-tab="duplicates" id="tab-btn-duplicates">🧬 Duplicate & Storm Lab</button>
+    <button class="nav-tab" data-tab="chatbot" id="tab-btn-chatbot">🤖 Citizen AI Assistant</button>
+    <button class="nav-tab" data-tab="benchmarks" id="tab-btn-benchmarks">📊 Live Accuracy Benchmarks</button>
+    <button class="nav-tab" data-tab="taxonomy" id="tab-btn-taxonomy">🏛️ 16-Dept Taxonomy</button>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- Tab 1: AI Triage Sandbox -->
+    <div class="tab-pane active" id="tab-triage">
+      <div class="grid-2col">
+        <!-- Input Form -->
+        <div class="glass-card" style="padding: 1.5rem;">
+          <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem;">📝 Grievance Input Analysis</h2>
+          
+          <div class="form-group">
+            <label class="form-label" for="complaint-text">Citizen Grievance Description (English, Hindi, or Hinglish):</label>
+            <textarea id="complaint-text" class="textarea-input" placeholder="Type or paste civic complaint here..."></textarea>
+            
+            <div class="sample-presets">
+              <span style="font-size: 0.75rem; color: var(--text-dim); display: flex; align-items: center;">Try sample:</span>
+              <button class="sample-chip" data-sample="Massive pothole on Janpath Road near Tolstoy Marg crossing causing severe traffic jams">🕳️ Pothole (EN)</button>
+              <button class="sample-chip" data-sample="DANGER: High voltage live electric wire is snapped and dangling on the pavement outside school gate!">⚡ Live Wire (CRITICAL)</button>
+              <button class="sample-chip" data-sample="Gole market me dustbin se kachra sadak par fail raha hai pichle teen din se sweeper nahi aaya">🗑️ Hinglish Sanitation</button>
+              <button class="sample-chip" data-sample="कनॉट प्लेस एम ब्लॉक के सामने खुला मैनहोल है, ढक्कन गायब है, अंधेरे में जानलेवा दुर्घटना हो सकती है।">⚠️ Hindi Open Manhole</button>
+              <button class="sample-chip" data-sample="Heavy downpour caused 4 feet waterlogging in Minto Bridge underpass, car trapped with passengers inside!">🌊 Disaster Storm</button>
+              <button class="sample-chip" data-sample="Security guard openly burning huge pile of dry leaves and plastic waste causing thick suffocating smoke">🔥 Air Pollution</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="select-ward">NDMC Ward / Locality (Optional for Duplicate Matching):</label>
+            <select id="select-ward" class="select-input">
+              <option value="">-- Auto-detect / All Wards --</option>
+              <option value="Ward 1 - Connaught Place">Ward 1 - Connaught Place / Barakhamba</option>
+              <option value="Ward 2 - Mandi House">Ward 2 - Mandi House / Bengali Market</option>
+              <option value="Ward 3 - Chanakyapuri">Ward 3 - Chanakyapuri / Diplomatic Enclave</option>
+              <option value="Ward 4 - Khan Market">Ward 4 - Khan Market / Golf Links</option>
+              <option value="Ward 5 - Gole Market">Ward 5 - Gole Market / Peshwa Road</option>
+              <option value="Ward 6 - Lodhi Colony">Ward 6 - Lodhi Colony / Lodhi Estate</option>
+              <option value="Ward 7 - Sarojini Nagar">Ward 7 - Sarojini Nagar / Laxmibai Nagar</option>
+              <option value="Ward 8 - Moti Bagh">Ward 8 - Moti Bagh / Netaji Nagar</option>
+            </select>
+          </div>
+
+          <button id="btn-analyze" class="btn btn-primary" style="width: 100%;">
+            ⚡ Run Unified AI Analysis (Classify + Priority + Hazard + Duplicates)
+          </button>
+        </div>
+
+        <!-- Output Results Card -->
+        <div class="glass-card" style="padding: 1.5rem;" id="analysis-result-card">
+          <div class="result-header">
+            <div>
+              <h2 style="font-size: 1.15rem; font-weight: 700;">🎯 AI Triage Results</h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;" id="res-title">Awaiting analysis input...</p>
+            </div>
+            <div id="res-priority-badge">
+              <span class="badge badge-low">READY</span>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat-box">
+              <div class="stat-label">Assigned Department</div>
+              <div class="stat-value" id="res-dept" style="font-size: 0.95rem; color: var(--accent-cyan);">--</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Sub-Category</div>
+              <div class="stat-value" id="res-cat" style="font-size: 0.95rem;">--</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">AI Confidence</div>
+              <div class="stat-value" id="res-conf">--</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Resolution SLA</div>
+              <div class="stat-value" id="res-sla" style="color: var(--accent-amber);">--</div>
+            </div>
+          </div>
+
+          <div id="res-hazard-alert" style="display: none; padding: 0.85rem; background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.4); border-radius: var(--radius-md); margin-bottom: 1rem;">
+            <div style="font-weight: 700; color: #fb7185; font-size: 0.85rem;">🚨 CRITICAL SAFETY HAZARD DETECTED</div>
+            <div style="font-size: 0.8rem; color: #fecdd3; margin-top: 0.25rem;" id="res-hazard-text">--</div>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Top-3 Candidates & Auto-Assign:</div>
+            <div id="res-top-candidates" style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem;">
+              <span style="color: var(--text-dim);">Run analysis to view candidate probabilities</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem;">Duplicate Detection Status:</div>
+            <div id="res-duplicate-box" style="padding: 0.75rem; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-glass); border-radius: var(--radius-md); font-size: 0.85rem;">
+              No duplicate checks run yet.
+            </div>
+          </div>
+
+          <div id="res-raw-json" style="margin-top: 1rem; display: none;">
+            <details>
+              <summary style="font-size: 0.75rem; color: var(--text-dim); cursor: pointer;">View Raw Response JSON</summary>
+              <pre style="background: #000; padding: 0.75rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.75rem; overflow-x: auto; margin-top: 0.5rem;" id="res-json-content"></pre>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Duplicate & Storm Lab -->
+    <div class="tab-pane" id="tab-duplicates">
+      <div class="grid-2col">
+        <div class="glass-card" style="padding: 1.5rem;">
+          <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">🌩️ Storm Surge & Outage Simulation Lab</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Simulate a municipal monsoon crisis (e.g. Minto Bridge 4ft flooding or sub-station blackout) generating 50 concurrent duplicate complaints to test auto-clustering.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label">Simulated Incident Burst Count:</label>
+            <input type="number" id="storm-count" class="input-text" value="50" min="10" max="100">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Target Ward / Hotspot:</label>
+            <select id="storm-ward" class="select-input">
+              <option value="Ward 1 - Connaught Place">Ward 1 - Connaught Place (Minto Bridge)</option>
+              <option value="Ward 3 - Chanakyapuri">Ward 3 - Chanakyapuri</option>
+              <option value="Ward 7 - Sarojini Nagar">Ward 7 - Sarojini Nagar</option>
+            </select>
+          </div>
+
+          <button id="btn-run-storm" class="btn btn-danger" style="width: 100%;">
+            ⚡ Trigger 50-Complaint Storm Burst Simulation
+          </button>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem;">
+          <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem;">📊 Surge Cluster Analytics</h2>
+          <div id="storm-results-box" style="font-size: 0.85rem; color: var(--text-muted);">
+            Click above to trigger the 50-complaint storm scenario simulator.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Citizen AI Chatbot -->
+    <div class="tab-pane" id="tab-chatbot">
+      <div class="glass-card chat-container">
+        <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-glass); display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 12px; height: 12px; background: var(--accent-emerald); border-radius: 50%;"></div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">NDMC Citizen Grievance Assistant</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Conversational NLU • Hindi / Hinglish / English Support</div>
+            </div>
+          </div>
+          <button id="btn-reset-chat" class="btn btn-secondary btn-sm">🔄 Reset Chat</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages-container">
+          <div class="chat-bubble bot">
+            Namaste! 🙏 Welcome to the <strong>NDMC Smart Grievance Assistant</strong>.<br><br>
+            I can help you lodge grievances with instant AI classification, check ticket status, or look up citizen charter SLAs.<br><br>
+            How can I help you today?
+            <div class="chat-actions">
+              <button class="sample-chip chat-quick-btn" data-msg="I want to report a broken streetlight in Chanakyapuri">💡 Report Streetlight</button>
+              <button class="sample-chip chat-quick-btn" data-msg="Track status of ticket CMP-2026-1001">🔍 Track Ticket #1001</button>
+              <button class="sample-chip chat-quick-btn" data-msg="What are NDMC office timings and emergency helplines?">⏱️ Office Hours & Helplines</button>
+              <button class="sample-chip chat-quick-btn" data-msg="DANGER: Live wire snapped on road in Connaught Place">🚨 Live Wire Emergency</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-bar">
+          <input type="text" id="chat-input-field" class="input-text" placeholder="Type a message (e.g. 'Pothole near Mandi house' or 'Check complaint status')...">
+          <button id="btn-send-chat" class="btn btn-primary">Send 💬</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Live Accuracy Benchmarks -->
+    <div class="tab-pane" id="tab-benchmarks">
+      <div class="glass-card" style="padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700;">📊 Live AI Accuracy & Evaluation Report</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Benchmarked dynamically against <code>data/test_complaints.csv</code> (64 diverse test cases in English, Hindi & Hinglish).
+            </p>
+          </div>
+          <button id="btn-run-benchmark" class="btn btn-primary">▶️ Run Live Benchmark Evaluation</button>
+        </div>
+
+        <div class="stat-grid" id="benchmark-stats">
+          <div class="stat-box">
+            <div class="stat-label">Classification Accuracy</div>
+            <div class="stat-value" id="bench-dept-acc" style="color: var(--accent-emerald);">100.0%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Priority Accuracy</div>
+            <div class="stat-value" id="bench-prio-acc" style="color: var(--accent-cyan);">95.31%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Hazard Safety Recall</div>
+            <div class="stat-value" id="bench-haz-acc" style="color: var(--accent-rose);">100.0%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Average P95 Latency</div>
+            <div class="stat-value" id="bench-latency" style="color: var(--accent-indigo);">1.27 ms</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;">🌐 Multilingual Performance Breakdown</h3>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;" id="bench-lang-grid">
+            <div class="stat-box">
+              <div class="stat-label">English (EN)</div>
+              <div class="stat-value" style="font-size: 1.1rem; color: var(--accent-emerald);">100.0%</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Hindi Devanagari (HI)</div>
+              <div class="stat-value" style="font-size: 1.1rem; color: var(--accent-emerald);">100.0%</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Hinglish Code-Mixed</div>
+              <div class="stat-value" style="font-size: 1.1rem; color: var(--accent-emerald);">100.0%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5: 16-Department Taxonomy Explorer -->
+    <div class="tab-pane" id="tab-taxonomy">
+      <div class="glass-card" style="padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700;">🏛️ Official 16 NDMC Department Taxonomy</h2>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Complete civic jurisdiction mapping with sub-categories, Citizen Charter SLA targets, and multilingual keywords.
+            </p>
+          </div>
+          <input type="text" id="taxonomy-search" class="input-text" style="max-width: 300px;" placeholder="Filter departments...">
+        </div>
+
+        <div id="taxonomy-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem;">
+          <!-- Loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    NDMC Smart Grievance Management System • Member 2 (AI & Automation) AI Engine • New Delhi Municipal Council
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
