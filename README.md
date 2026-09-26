@@ -4,6 +4,8 @@
 **Organization:** New Delhi Municipal Council (NDMC)  
 **Technology Stack:** Python 3.10+, FastAPI, Pydantic, Vector Cosine/TF-IDF Engine, Google Gemini API fallback, Vanilla JS/CSS Cyber UI  
 
+LIVE DEMO- https://ndmc-nagrikai.vercel.app/
+
 ---
 
 ## 🏛️ Architecture Overview
